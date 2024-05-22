@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="css1_abu/style.css">
+</head>
+<body>
+
+  <div class="container">
+    <div class="login-box">
+      <h1>Welcome!</h1>
+
+      <h2>Login</h2>
+      <form th:action="@{/authenticate}" method="post" id="login-form">
+        <label for="email">user name</label>
+        <input type="email" id="email" name="email"  required>
+        <br>
+
+        <label for="password">password</label>
+        <input type="password" id="password" name="password" required>
+        <br>
+
+        <button type="submit">Login</button>
+        <button type="reset">Reset</button>
+        <span><p>Login with</p></span>
+
+        <div  style="margin-top: 20px; display: flex; justify-content: space-evenly;" class="row">
+
+         <div> <img src="google_logo.png" height="25px" width="25px"/>
+        </div>
+        <div> <img src="linkedIn_logo.png" height="25px" width="25px"/>
+        </div>
+          
+        </div>
+
+      </form>
+
+      <p>Don't have an account? <a href="#" id="signup-link" th:href="@{/signup}">Register</a><a href="#" id="forgot_p" th:href="@{/forgotPassword}">Forgot password</a></p>
+    </div>
+
+</div>
+
+  <script src="script.js"></script>
+</body>
+</html>
