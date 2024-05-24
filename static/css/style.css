@@ -32,6 +32,43 @@
   --box-shadow: 0 .5rem 1rem rgba(0, 0, 0, 0.1);
 }
 
+/* Base styles */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.container {
+  width: 100%;
+  margin: 0 auto;
+  padding: 15px;
+}
+
+/* Styles for tablets and larger screens */
+@media (min-width: 768px) {
+  .container {
+      width: 750px;
+  }
+}
+
+/* Styles for desktop and larger screens */
+@media (min-width: 1024px) {
+  .container {
+      width: 970px;
+  }
+}
+
+/* Styles for large desktops and larger screens */
+@media (min-width: 1200px) {
+  .container {
+      width: 1170px;
+  }
+}
+
+
+
 *{
   font-family: 'DM Sans', sans-serif;
   margin: 0; padding: 0;
@@ -284,14 +321,14 @@ section{
 
 /* home */
 
-home{
+/*home{
   /* min-height: 100vh;
   display: flex;
   align-items: center;
   background: url(../images/hero-image-1.jpg) no-repeat;
   background-size: cover;
-  background-position: center; */
-}
+  background-position: center; 
+}*/
 .home {
   width: 100%;
   height: 90px;
@@ -541,10 +578,11 @@ home{
 
 /* teacher */
 
-.teacher .box-container{
+/* .teacher .box-container{
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
   gap: 2rem;
+  
 }
 
 .teacher .box-container .box{
@@ -564,6 +602,7 @@ home{
 .teacher .box-container .box .image img{
   background: var(--secondary);
   width: 100%;
+  
 }
 
 .teacher .box-container .box:hover .image .share{
@@ -608,7 +647,138 @@ home{
   font-size: 1.5rem;
   line-height: 2;
   color: #777;
+} */
+/* General styling for the teacher section */
+.teacher {
+  text-align: center;
+  padding: 50px 0;
+  background-color: #f9f9f9; /* Light background for the section */
 }
+
+.teacher .heading {
+  font-size: 2.5rem;
+  margin-bottom: 30px;
+  color: #333;
+}
+
+.teacher .box-container .box .image .share a{
+  height: 4rem;
+  width: 4rem;
+  line-height: 4rem;
+  font-size: 2rem;
+  margin: 0 1rem;
+  color: var(--secondary);
+  background: var(--primary-color);
+  border-radius: .5rem;
+}
+
+.teacher .box-container .box .image .share a:hover{
+  color: var(--primary-color);
+  background: var(--secondary);
+}
+
+
+.box-containers {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+.boxs {
+  background-color: #fff;
+  border: 1px solid #6c6ab2;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  width: 250px;
+   border: .1rem solid var(--primary-color);
+  text-align: center;
+  transition: transform 0.3s;
+}
+
+/* .img{
+  border-radius: var(--black);
+} */
+.boxs:hover {
+  transform: translateY(-10px);
+}
+
+.boxs .image {
+  position: relative;
+  overflow: hidden;
+  padding: 20px;
+
+}
+
+.boxs .image img {
+  width: 100px; /* Adjust size as needed */
+  height: 100px; /* Adjust size as needed */
+  border-radius: 50%; /* Make the image circular */
+  object-fit: cover;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.boxs:hover .image img {
+  transform: scale(1.1);
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+}
+
+.boxs .share {
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 10px;
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+.boxs:hover .share {
+  opacity: 1;
+}
+
+.boxs .share a {
+  color: #3115cd;
+  background-color: rgb(239, 242, 242);
+  padding: 5px;
+  border-radius: 50%;
+  font-size: 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+}
+
+.boxs .content {
+  padding: 20px;
+}
+
+.boxs .content h3 {
+  font-size: 1.2rem;
+  margin: 10px 0 5px;
+  color: #333;
+}
+
+.boxs .content span {
+  color: #666;
+  font-size: 0.9rem;
+}
+
+.headings{
+  position: relative;
+  box-shadow: #251bdc;
+  color: #251bdc;
+  font-size: 3rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: .4rem;
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+
 
 /* ends */
 
