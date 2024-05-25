@@ -33,7 +33,7 @@ var swiper = new Swiper(".review-slider",{
   centeredSlides: true,
   grabCursor: true,
   autoplay:{
-    delay: 7500,
+    delay: 2000,
     disableOnInteraction: false,
   },
   loop: true,
@@ -49,6 +49,38 @@ var swiper = new Swiper(".review-slider",{
     },
   },
 });
+
+// var swiper=new swiper(".slide-content",{
+//   slidesPerView:3,
+//   spaceBetween: 25,
+//   loop: true,
+//   centeredSlides: 'true',
+//   fade: 'true',
+//   grabCursor: 'true',
+//   pagination:{
+//     el:".swiper-pagination",
+//     clickable: true,
+//     dynamicBullets: true,
+//   },
+//   navigaton:{
+//     nextEl: ".swiper-button-next",
+//     prevEl: ".swiper-button-prev",
+//   },
+
+//   breakpoints:{
+//     0:{
+//       slidesPerView: 1,
+//     },
+//     520: {
+//       slidesPerView: 2,
+//     },
+//     950: {
+//       slidesPerView3
+//     },
+//   },
+// });
+
+
 
 document.addEventListener("DOMContentLoaded", function() {
   let currentSlide = 0;
@@ -276,3 +308,5 @@ let cart_data = JSON.parse(localStorage.getItem("3SV"))
     }
     var btnc = document.getElementById("coupon-btn")
     btnc.addEventListener("click", promo)
+
+    
